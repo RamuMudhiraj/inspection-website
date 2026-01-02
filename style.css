@@ -1,0 +1,451 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f1f5f9;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #090909;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+}
+
+.logo a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* Nav links (desktop) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  border-bottom: 2px solid #bfee05;
+}
+
+/* Hamburger (hidden on desktop) */
+#hamburger {
+  display: none;
+  font-size: 34px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ================= MOBILE & TABLET ================= */
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #090909;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 12px 0;
+  }
+}
+
+/* ================= HEADINGS ================= */
+.heading {
+  text-align: center;
+  font-size: 40px;
+  margin: 30px 0;
+}
+
+.heading1 {
+  text-align: center;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+/* ================= FORMS ================= */
+.form-container {
+  max-width: 600px;
+  background: white;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.service-form .form-group {
+  margin-bottom: 15px;
+}
+
+.service-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.service-form input,
+.service-form select,
+.service-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+}
+
+.service-form textarea {
+  resize: none;
+  height: 80px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ================= TABLE ================= */
+table {
+  background: white;
+  border-collapse: collapse;
+}
+
+th {
+  background: #1e293b;
+  color: white;
+}
+
+th, td {
+  border: 1px solid #cbd5e1;
+  text-align: center;
+  padding: 10px;
+}
+
+/* ================= BUTTON ================= */
+button {
+  padding: 10px 18px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* ================= GRAPH ================= */
+canvas {
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* ================= RESPONSIVE TEXT ================= */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 30px;
+  }
+}
+
+/* ================= CUSTOMER PAGE ================= */
+#customerInfo {
+  background: rgb(48, 48, 48);
+  padding: 15px;
+  border-radius: 6px;
+  margin: 10px auto;
+  max-width: 600px;
+}
+
+/* ===== FORCE FIX HAMBURGER VISIBILITY ===== */
+
+/* Always keep navbar as reference */
+.navbar {
+  position: relative;
+  z-index: 9999;
+}
+
+/* Hamburger base */
+#hamburger {
+  display: none;
+  font-size: 34px;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* Tablet & Mobile */
+@media (max-width: 768px) {
+  #hamburger {
+    display: block !important;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #090909;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+  }
+}
+
+/* index.html */
+/* Mobile (default: up & down) */
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.layout-main,
+.layout-side {
+  padding: 20px;
+  /* background: #f2f2f2;
+  border: 1px solid #ccc; */
+}
+
+
+/* Tablet & Desktop (≥600px) */
+@media (min-width: 600px) {
+  .layout-wrapper {
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+
+  .layout-main {
+    width: 60%;
+  }
+
+  .layout-side {
+    width: 40%;
+  }
+}
+/* Mobile only */
+@media (max-width: 599px) {
+  .layout-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+/* Mobile only */
+/* Mobile only */
+/* Mobile only */
+/* Mobile: max-width 600px */
+/* Mobile screens only */
+@media (max-width: 600px) {
+  .middle-wrapper {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    
+  }
+}
+/* Layout-main text styling */
+.layout-main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center horizontally */
+  padding: 20px;
+}
+
+.layout-main h1 {
+  font-size: 35px; /* desktop default */
+  margin: 15px 0;  /* small gap above and below */
+}
+
+.layout-main p {
+  font-size: 19px;
+  margin: 5px 0 10px 0; /* small gap above, 10px below */
+  color: black;
+}
+
+/* Tablet screens */
+@media (max-width: 900px) {
+  .layout-main h1 {
+    font-size: 25px;
+    margin: 12px 0;
+  }
+
+  .layout-main p {
+    font-size: 12px;
+    margin: 4px 0 8px 0;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .layout-main h1 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+
+  .layout-main p {
+    font-size: 14px;
+    margin: 3px 0 6px 0;
+  }
+}
+
+
+
+/* Desktop screen styling */
+@media (min-width: 901px) {
+  .layout-main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center horizontally */
+    justify-content: center; /* center vertically if needed */
+    padding: 40px; /* more spacious padding for desktop */
+    max-width: 800px; /* optional: keep content width readable */
+    margin: 0 auto;  /* center the layout-main horizontally in page */
+  }
+
+  .layout-main h1 {
+    font-size: 35px; /* large heading for desktop */
+    margin: 15px 0;  /* small gap above and below */
+    color: #000;
+  }
+
+  .layout-main p {
+    font-size: 19px; /* readable paragraph size */
+    margin: 5px 0 10px 0; /* small gap above, 10px below */
+    color: #333;
+    line-height: 1.6; /* comfortable reading */
+  }
+}
+
+/* =========================== */
+/* Home Page Images / Containers */
+/* =========================== */
+.home_img {
+    width: 90%;
+}
+
+@media (max-width: 480px) {
+    .home_img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.home1_container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 5%;
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home1_container img {
+    width: 100%;
+    height: 450px;
+}
+
+@media (max-width: 768px) {
+    .home1_container img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .home1_container img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* =========================== */
+/* Footer / Social Icons */
+/* =========================== */
+footer {
+    background-color: #111;
+    padding: 10px 20px;
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+.footer-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.social-icons a {
+    font-size: 30px;
+    color: #ddd;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #25d366;
+}
