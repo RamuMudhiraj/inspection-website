@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Data</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbars"></div>
+
+<h2 class="heading">Customer Inspection Data</h2>
+
+<div class="form-group">
+  <label>Select Customer (Phone)</label>
+  <select id="customerSelect">
+    <option value="">Select Customer</option>
+  </select>
+</div>
+
+<div id="customerInfo"></div>
+<br>
+
+
+ <h2 class="heading1">Inspection Records</h2>
+
+<table border="1" width="100%" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Room</th>
+      <th>Service</th>
+      <th>Problem</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody id="inspectionTableBody"></tbody>
+</table>
+
+<script type="module" src="index.js"></script>
+</body>
+</html>
